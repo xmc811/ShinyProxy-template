@@ -3,26 +3,26 @@ proxy:
   authentication: simple
   admin-groups: admins
   users:
-  - name: mingchu
-    password: password
+  - name: alice
+    password: alice
     groups: admins
-  - name: sean
-    password: password
+  - name: bob
+    password: bob
   docker:
       internal-networking: true
   specs:
-  - id: test
-    display-name: Test App
-    description: This is a test application.
+  - id: hist
+    display-name: Histogram
+    description: Histogram R Shiny App
     container-cmd: []
-    container-volumes: ["/Users/mxu3/Documents/projects:/folder"]
-    container-image: shiny_test:latest
-    container-network: sp-mda-net
-  - id: mda_gde
-    display-name: Genomic Data Explorer
+    container-image: shiny-hist
+    container-network: sp-test-net
+  - id: scatter
+    display-name: Scatterplot
+    description: Scatterplot R Shiny App
     container-cmd: []
-    container-image: xmc811/shiny_gde_run:1.0
-    container-network: sp-mda-net
+    container-image: shiny-scatter
+    container-network: sp-test-net
 
 logging:
   file:
