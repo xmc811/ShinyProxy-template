@@ -4,6 +4,9 @@
 mkdir -p /var/log/shiny-server
 chown shiny.shiny /var/log/shiny-server
 
+env > /home/shiny/.Renviron
+chown shiny.shiny /home/shiny/.Renviron
+
 if [ "$APPLICATION_LOGS_TO_STDOUT" != "false" ];
 then
     # push the "real" application logs to stdout with xtail in detached mode

@@ -3,6 +3,8 @@
 library(shiny)
 library(tidyverse)
 
+username <- Sys.getenv("SHINYPROXY_USERNAME")
+
 ui <- fluidPage(
     
     titlePanel("Correlation of two Numeric Variables"),
@@ -11,7 +13,7 @@ ui <- fluidPage(
         sidebarPanel(
             selectInput("file",
                         "Select file:",
-                        list.files("/Data/DF/")),
+                        list.files(paste0("/Data/DF/", username))),
             br(),
             br(),
             br(),
@@ -33,7 +35,7 @@ server <- function(input, output) {
     
     output$scatterPlot <- renderPlot({
         
-        df <- read_csv(paste0("/Data/DF/", input$file))
+        df <- read_csv(paste0("/Data/DF/", username, "/", input$file))
         
         ggplot(df) + geom_point(aes(x, y), color = input$color)
     })
