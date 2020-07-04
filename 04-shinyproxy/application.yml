@@ -3,10 +3,10 @@ proxy:
   authentication: simple
   admin-groups: admins
   users:
-  - name: alice
+  - name: Alice
     password: alice
     groups: admins
-  - name: bob
+  - name: Bob
     password: bob
   docker:
       internal-networking: true
