@@ -1,0 +1,29 @@
+proxy:
+  port: 8080
+  authentication: simple
+  admin-groups: admins
+  users:
+  - name: Alice
+    password: alice
+    groups: admins
+  - name: Bob
+    password: bob
+  docker:
+      internal-networking: true
+  specs:
+  - id: hist
+    display-name: Histogram
+    description: Histogram R Shiny App
+    container-cmd: []
+    container-image: shiny-hist
+    container-network: sp-test-net
+  - id: scatter
+    display-name: Scatterplot
+    description: Scatterplot R Shiny App
+    container-cmd: []
+    container-image: shiny-scatter
+    container-network: sp-test-net
+
+logging:
+  file:
+    shinyproxy.log
