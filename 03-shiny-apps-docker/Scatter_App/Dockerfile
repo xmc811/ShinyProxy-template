@@ -1,12 +1,9 @@
-FROM rocker_gde_base:latest
-
+FROM rocker/shiny-verse:latest
 
 # copy the app to the image
 COPY *.Rproj /srv/shiny-server/
 COPY *.R /srv/shiny-server/
 COPY data /srv/shiny-server/data
-COPY large_data /srv/shiny-server/large_data
-COPY www /srv/shiny-server/www
 
 # select port
 EXPOSE 3838
