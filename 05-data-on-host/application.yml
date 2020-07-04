@@ -15,13 +15,15 @@ proxy:
     display-name: Histogram
     description: Histogram R Shiny App
     container-cmd: []
-    container-image: shiny-hist
+    container-volumes: ["/Users/mingchuxu/Documents/projects/ShinyProxy-template/05-data-on-host/Data/:/Data"]
+    container-image: shiny-hist-data
     container-network: sp-test-net
   - id: scatter
     display-name: Scatterplot
     description: Scatterplot R Shiny App
     container-cmd: []
-    container-image: shiny-scatter
+    container-volumes: ["/Users/mingchuxu/Documents/projects/ShinyProxy-template/05-data-on-host/Data/:/Data"]
+    container-image: shiny-scatter-data
     container-network: sp-test-net
 
 logging:
