@@ -3,7 +3,6 @@ FROM rocker/shiny-verse:latest
 # copy the app to the image
 COPY *.Rproj /srv/shiny-server/
 COPY *.R /srv/shiny-server/
-COPY data /srv/shiny-server/data
 
 # select port
 EXPOSE 3838
