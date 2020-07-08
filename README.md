@@ -2,7 +2,7 @@
 ### Examples for R Shiny app + docker + ShinyProxy deployment
 
 This repository hosts all the files needed for building docker images shown in the tutorial 
-"An open-source solution to deploy multiple R Shiny apps with user-specific data access".
+"[An open-source solution to deploy multiple R Shiny apps with user-specific data access](https://medium.com/@mxu.china/an-open-source-solution-to-deploy-enterprise-level-r-shiny-applications-2e19d950ff35)".
 
 ### How to use
 
